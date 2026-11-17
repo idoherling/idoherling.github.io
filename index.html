@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ido Herling</title>
+<meta name="description" content="Ido Herling — PPE & Law at Tel Aviv University. Decision science, risk, markets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f1ea; --ink:#141414; --mute:#6b6862; --rule:#d6d1c6; --accent:#d9481c;
+    --display:'Archivo',system-ui,sans-serif; --sans:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#121212; --ink:#ece8df; --mute:#9a958c; --rule:#2c2b28; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--paper);color:var(--ink)}
+  body{font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
+       max-width:880px;margin:0 auto;padding:56px 28px 72px}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+
+  header{display:grid;grid-template-columns:1fr auto;align-items:start;gap:24px;
+         border-top:6px solid var(--ink);padding-top:20px}
+  .mark{width:44px;height:44px;position:relative}
+  .mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent)}
+  .mark::after{content:"";position:absolute;left:50%;top:0;width:50%;height:100%;background:var(--ink)}
+
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(48px,9vw,96px);line-height:.92;
+     letter-spacing:-.035em;margin:64px 0 22px}
+  .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.4;max-width:30ch}
+
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin:40px 0 72px}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;
+       border:1.5px solid var(--ink);padding:12px 18px;display:inline-flex;gap:10px;align-items:center;
+       transition:background .15s,color .15s}
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn.primary{background:var(--ink);color:var(--paper)}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+
+  section{display:grid;grid-template-columns:160px 1fr;gap:24px;border-top:1px solid var(--rule);padding:26px 0}
+  ul{list-style:none}
+  li{display:grid;grid-template-columns:1fr auto;gap:16px;padding:6px 0}
+  li b{font-weight:500}
+  li span{color:var(--mute)}
+  li .mono{align-self:center}
+
+  .link{color:var(--ink);border-bottom:1.5px solid var(--accent)}
+  .link:hover{color:var(--accent)}
+  footer{display:flex;justify-content:space-between;border-top:6px solid var(--ink);margin-top:40px;padding-top:14px}
+
+  @media (max-width:620px){
+    body{padding:32px 20px 56px}
+    section{grid-template-columns:1fr;gap:10px}
+    li{grid-template-columns:1fr}
+    h1{margin-top:44px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mono">Tel Aviv — Decision Science / Risk / Markets</div>
+  <div class="mark" aria-hidden="true"></div>
+</header>
+
+<h1>Ido<br>Herling</h1>
+<p class="lede">PPE student with a Law minor at Tel Aviv University. I build decision models for fraud and risk at PayPal, and write on markets, philosophy and technology.</p>
+
+<nav class="actions">
+  <a class="btn primary" href="cv/">CV ↗</a>
+  <a class="btn" href="https://www.linkedin.com/in/ido-herling" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="btn" href="mailto:idoherling98@gmail.com">Email</a>
+</nav>
+
+<section>
+  <div class="mono">Now</div>
+  <ul>
+    <li><div><b>Decision Scientist</b> <span>— PayPal, Partner Risk</span></div><div class="mono">2026–</div></li>
+    <li><div><b>BA, Philosophy, Politics &amp; Economics</b> <span>— Tel Aviv University, Law minor</span></div><div class="mono">’27</div></li>
+  </ul>
+</section>
+
+<section>
+  <div class="mono">Before</div>
+  <ul>
+    <li><div><b>AI Research Assistant</b> <span>— Henry Crown Institute, TAU</span></div><div class="mono">2025–26</div></li>
+    <li><div><b>Student Position</b> <span>— Prime Minister’s Office</span></div><div class="mono">2024–26</div></li>
+    <li><div><b>Platoon Sergeant</b> <span>— IDF, Maglan Unit</span></div><div class="mono">2019–22</div></li>
+  </ul>
+</section>
+
+<section>
+  <div class="mono">Published &amp; Upcoming Writing</div>
+  <ul>
+    <li><div><b>A philosophical defense of prediction markets</b> <span>— forthcoming in <a class="link" href="https://www.itutim.com/" target="_blank" rel="noopener">Itutim ↗</a>, the journal of Israel’s PPE programs</span></div><div class="mono">Upcoming</div></li>
+  </ul>
+</section>
+
+<footer>
+  <span class="mono">© 2026 Ido Herling</span>
+  <a class="mono" href="cv/">CV ↗</a>
+</footer>
+
+</body>
+</html>
