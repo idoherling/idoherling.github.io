@@ -33,6 +33,10 @@
      letter-spacing:-.035em;margin:64px 0 22px}
   .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.4;max-width:30ch}
 
+  .hero{display:grid;grid-template-columns:1fr 168px;gap:32px;align-items:end}
+  .photo{width:168px;height:168px;object-fit:cover;filter:grayscale(1) contrast(1.05);
+         border:1.5px solid var(--ink);margin-bottom:6px;transition:filter .3s}
+  .photo:hover{filter:none}
   .actions{display:flex;flex-wrap:wrap;gap:12px;margin:40px 0 72px}
   .btn{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;
        border:1.5px solid var(--ink);padding:12px 18px;display:inline-flex;gap:10px;align-items:center;
@@ -57,6 +61,8 @@
     section{grid-template-columns:1fr;gap:10px}
     li{grid-template-columns:1fr}
     h1{margin-top:44px}
+    .hero{grid-template-columns:1fr;gap:0}
+    .photo{width:112px;height:112px;order:-1;margin:36px 0 0}
   }
 </style>
 </head>
@@ -67,8 +73,13 @@
   <div class="mark" aria-hidden="true"></div>
 </header>
 
-<h1>Ido<br>Herling</h1>
-<p class="lede">PPE student with a Law minor at Tel Aviv University. I build decision models for fraud and risk at PayPal, and write on markets, philosophy and technology.</p>
+<div class="hero">
+  <div>
+    <h1>Ido<br>Herling</h1>
+    <p class="lede">PPE student with a Law minor at Tel Aviv University. I build decision models for fraud and risk at PayPal, and write on markets, philosophy and technology.</p>
+  </div>
+  <img class="photo" src="photo.jpg" alt="Ido Herling" width="400" height="400" onerror="this.remove()">
+</div>
 
 <nav class="actions">
   <a class="btn primary" href="cv/">CV ↗</a>
