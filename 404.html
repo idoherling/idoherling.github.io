@@ -2,13 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#212121">
+<meta name="color-scheme" content="dark">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — Ido Herling</title>
-<link rel="icon" href="/favicon.svg?v=6" type="image/svg+xml">
-<style>body{max-width:720px;margin:40px auto;padding:0 20px;font-family:"Times New Roman",Times,serif;font-size:18px;line-height:1.45;color:#111;background:#fff} a{color:#0000ee}</style>
+<link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=5" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#212121; --ink:#f5f5f3; --mute:#a3a3a1; --rule:#363636; --accent:#8fc1ea;
+    --display:'EB Garamond',Georgia,serif; --sans:'Source Sans 3',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--paper);color:var(--ink)}
+  body{font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
+       max-width:880px;margin:0 auto;padding:56px 28px 72px}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+
+  header{display:grid;grid-template-columns:1fr auto;align-items:start;gap:24px;
+         border-top:6px solid var(--ink);padding-top:20px}
+  .mark{width:44px;height:44px;position:relative}
+  .mark::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent)}
+  .mark::after{content:"";position:absolute;left:50%;top:0;width:50%;height:100%;background:var(--ink)}
+
+  h1{font-family:var(--display);font-weight:500;font-size:clamp(48px,9vw,96px);line-height:.95;letter-spacing:-.02em;margin:64px 0 22px}
+  .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.4;max-width:30ch}
+
+  .hero{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:end;margin-top:48px}
+  .hero h1{margin-top:0}
+  .photo{width:300px;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center top;
+         border:1.5px solid var(--ink)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin:40px 0 72px}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;
+       border:1.5px solid var(--ink);padding:12px 18px;display:inline-flex;gap:10px;align-items:center;
+       transition:background .15s,color .15s}
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn.primary{background:var(--ink);color:var(--paper)}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+
+  section{display:grid;grid-template-columns:160px 1fr;gap:24px;border-top:1px solid var(--rule);padding:26px 0}
+  ul{list-style:none}
+  li{display:grid;grid-template-columns:1fr auto;gap:16px;padding:6px 0}
+  li b{font-weight:500}
+  li span{color:var(--mute)}
+  li .mono{align-self:center}
+
+  .link{color:var(--ink);border-bottom:1.5px solid var(--accent)}
+  .link:hover{color:var(--accent)}
+  footer{display:flex;justify-content:space-between;border-top:6px solid var(--ink);margin-top:40px;padding-top:14px}
+
+  @media (max-width:620px){
+    body{padding:32px 20px 56px}
+    section{grid-template-columns:1fr;gap:10px}
+    li{grid-template-columns:1fr}
+    h1{margin-top:44px}
+    .hero{grid-template-columns:1fr;gap:28px;margin-top:32px}
+    .photo{width:100%;order:-1}
+  }
+  .nf{font-family:var(--display);font-weight:500;font-size:clamp(96px,20vw,200px);line-height:.9;letter-spacing:-.02em;margin:72px 0 18px}
+</style>
 </head>
 <body>
-<h1>Page not found</h1>
-<p>This page doesn’t exist. Go back to the <a href="/">homepage</a>, or see my <a href="/cv.pdf">CV</a>.</p>
+<header>
+  <div class="mono">Tel Aviv — Decision Science / Risk / Markets</div>
+  <div class="mark" aria-hidden="true"></div>
+</header>
+<p class="nf">404</p>
+<p class="lede">This page doesn’t exist — or the model assigned it a probability of zero.</p>
+<nav class="actions">
+  <a class="btn primary" href="/">← Home</a>
+  <a class="btn" href="/cv.pdf" target="_blank" rel="noopener">CV ↗</a>
+</nav>
 </body>
 </html>
