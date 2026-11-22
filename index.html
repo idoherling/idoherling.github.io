@@ -43,10 +43,14 @@
   h1{font-family:var(--display);font-weight:500;font-size:clamp(48px,9vw,96px);line-height:.95;letter-spacing:-.02em;margin:64px 0 22px}
   .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.4;max-width:30ch}
 
-  .hero{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:end;margin-top:48px}
+  .hero{display:grid;grid-template-columns:1fr 200px;gap:40px;align-items:end;margin-top:48px}
   .hero h1{margin-top:0}
-  .photo{width:300px;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center top;
+  .photo{width:200px;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center top;
          border:1.5px solid var(--ink)}
+  .links{font-size:14px;letter-spacing:.06em;margin:36px 0 72px;color:var(--ink)}
+  .links a{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:1px}
+  .links a:hover{color:var(--accent)}
+  .links .dot{color:var(--mute);margin:0 12px}
   .actions{display:flex;flex-wrap:wrap;gap:12px;margin:40px 0 72px}
   .btn{font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;
        border:1.5px solid var(--ink);padding:12px 18px;display:inline-flex;gap:10px;align-items:center;
@@ -72,30 +76,27 @@
     li{grid-template-columns:1fr}
     h1{margin-top:44px}
     .hero{grid-template-columns:1fr;gap:28px;margin-top:32px}
-    .photo{width:100%;order:-1}
+    .photo{width:140px;order:-1}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="mono">Tel Aviv — Decision Science / Risk / Markets</div>
+  <div class="mono">Tel Aviv</div>
   <div class="mark" aria-hidden="true"></div>
 </header>
 
 <div class="hero">
   <div>
     <h1>Ido<br>Herling</h1>
-    <p class="lede">PPE student with a Law minor at Tel Aviv University. I build decision models for fraud and risk at PayPal, and write on markets, philosophy and technology.</p>
+    <p class="lede">PPE at Tel Aviv University. Fraud and risk at PayPal.</p>
   </div>
   <img class="photo" src="photo.jpg" alt="Ido Herling" width="400" height="500" onerror="this.remove()">
 </div>
 
-<nav class="actions">
-  <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener">CV ↗</a>
-  <a class="btn" href="https://www.linkedin.com/in/ido-herling" target="_blank" rel="noopener">LinkedIn</a>
-  <a class="btn" href="https://github.com/idoherling" target="_blank" rel="noopener">GitHub</a>
-  <a class="btn" href="mailto:idoherling98@gmail.com">Email</a>
+<nav class="links mono">
+  <a href="cv.pdf" target="_blank" rel="noopener">cv</a><span class="dot">·</span><a href="https://www.linkedin.com/in/ido-herling" target="_blank" rel="noopener">linkedin</a><span class="dot">·</span><a href="https://github.com/idoherling" target="_blank" rel="noopener">github</a><span class="dot">·</span><a href="mailto:idoherling98@gmail.com">email</a>
 </nav>
 
 <section>
@@ -110,7 +111,7 @@
   <div class="mono">Before</div>
   <ul>
     <li><div><b>AI Research Assistant</b> <span>— Henry Crown Institute, TAU</span></div><div class="mono">2025–26</div></li>
-    <li><div><b>Student Position</b> <span>— Prime Minister’s Office</span></div><div class="mono">2024–26</div></li>
+    <li><div><b>Prime Minister’s Office</b></div><div class="mono">2024–26</div></li>
     <li><div><b>Platoon Sergeant</b> <span>— IDF, Maglan Unit</span></div><div class="mono">2019–22</div></li>
   </ul>
 </section>
@@ -118,19 +119,19 @@
 <section>
   <div class="mono">Projects</div>
   <ul>
-    <li><div><a class="link" href="https://idoherling.github.io/2026_Election_Model/" target="_blank" rel="noopener"><b>2026 Israeli Election Model</b> ↗</a> <span>— a pre-registered Bayesian forecast of the October 2026 Knesset election: 8,000 simulated elections with threshold and Bader–Ofer seat allocation, plus coalition-formation odds. Backtested on eight elections since 2009. <a class="link" href="https://idoherling.github.io/2026_Election_Model/scorecard.html" target="_blank" rel="noopener">How did it do? ↗</a> · <a class="link" href="https://github.com/idoherling/2026_Election_Model" target="_blank" rel="noopener">Code ↗</a></span></div><div class="mono">Python</div></li>
+    <li><div><a class="link" href="https://idoherling.github.io/2026_Election_Model/" target="_blank" rel="noopener"><b>Knesset 2026 forecast</b> ↗</a> <span>— <a class="link" href="https://idoherling.github.io/2026_Election_Model/scorecard.html" target="_blank" rel="noopener">how did it do?</a> · <a class="link" href="https://github.com/idoherling/2026_Election_Model" target="_blank" rel="noopener">code</a></span></div><div class="mono">Python</div></li>
   </ul>
 </section>
 
 <section>
-  <div class="mono">Published &amp; Upcoming Writing</div>
+  <div class="mono">Writing</div>
   <ul>
-    <li><div><b>A philosophical defense of prediction markets</b> <span>— forthcoming in <a class="link" href="https://www.itutim.com/" target="_blank" rel="noopener">Itutim ↗</a>, the journal of Israel’s PPE programs</span></div><div class="mono">Upcoming</div></li>
+    <li><div><b>A philosophical defense of prediction markets</b> <span>— <a class="link" href="https://www.itutim.com/" target="_blank" rel="noopener">Itutim</a></span></div><div class="mono">Forthcoming</div></li>
   </ul>
 </section>
 
 <footer>
-  <span class="mono">© 2026 Ido Herling</span>
+  <span class="mono">last updated nov 2026</span>
   <a class="mono" href="cv.pdf" target="_blank" rel="noopener">CV ↗</a>
 </footer>
 
